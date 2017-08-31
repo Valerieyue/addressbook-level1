@@ -19,26 +19,26 @@
 
   # should catch invalid args format
   add wrong args wrong args
-  add Valid Name p/12345 valid@email.butNoPrefix
-  add Valid Name 12345 e/valid@email.butPhonePrefixMissing
+  add Valid Name p/12345 valid@email.butNoPrefix d/123
+  add Valid Name 12345 e/valid@email.butPhonePrefixMissing d/123
   
   # should catch invalid person data
-  add []\[;] p/12345 e/valid@e.mail
-  add Valid Name p/not_numbers e/valid@e.mail
-  add Valid Name p/12345 e/notAnEmail
+  add []\[;] p/12345 e/valid@e.mail d/123
+  add Valid Name p/not_numbers e/valid@e.mail d/123
+  add Valid Name p/12345 e/notAnEmail d/123
 
   # should add correctly
-  add Adam Brown p/111111 e/adam@gmail.com
+  add Adam Brown p/111111 e/adam@gmail.com d/123
   list
-  add Betsy Choo p/222222 e/benchoo@nus.edu.sg
+  add Betsy Choo p/222222 e/benchoo@nus.edu.sg d/123
   list
 
   # order of phone and email should not matter
-  add Charlie Dickson e/charlie.d@nus.edu.sg p/333333
+  add Charlie Dickson p/333333 e/charlie.d@nus.edu.sg d/123
   list
-  add Dickson Ee e/dickson@nus.edu.sg p/444444
+  add Dickson Ee p/444444 e/dickson@nus.edu.sg d/123
   list
-  add Esther Potato p/555555 e/esther@notreal.potato
+  add Esther Potato p/555555 e/esther@notreal.potato d/123
   list
 
 ##########################################################
