@@ -65,13 +65,12 @@ Format: `help`
 #### Adding a person: `add`
 > Adds a person to the address book
 
-Format: `add NAME p/PHONE_NUMBER e/EMAIL`  
+Format: `add NAME p/PHONE_NUMBER e/EMAIL d/DOB`
 > Words in `UPPER_CASE` are the parameters<br>
-  Phone number and email can be in any order but the name must come first.
 
 Examples: 
-* `add John Doe p/98765432 e/johnd@gmail.com`
-* `add Betsy Crowe e/bencrowe@gmail.com p/1234567 `
+* `add John Doe p/98765432 e/johnd@gmail.com d/010192`
+* `add Betsy Crowe p/1234567 e/bencrowe@gmail.com d/020394`
 
 #### Listing all persons: `list`
 
@@ -285,6 +284,7 @@ private static final String PERSON_PROPERTY_EMAIL = "email";
 HashMap<String,String> john = new HashMap<>();
 john.put(PERSON_PROPERTY_NAME, "John Doe");
 john.put(PERSON_PROPERTY_EMAIL, "john.doe@email.com");
+john.put(PERSON_PROPERTY_EMAIL, "010192");
 //etc.
 ```
 
@@ -300,6 +300,7 @@ private enum PersonProperty  {NAME, EMAIL, PHONE};
 HashMap<PersonProperty,String> john = new HashMap<>();
 john.put(PersonProperty.NAME, "John Doe");
 john.put(PersonProperty.EMAIL, "john.doe@email.com");
+john.put(PersonProperty.DOB, "010192");
 //etc.
 ```
 
